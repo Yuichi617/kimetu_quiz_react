@@ -60,43 +60,61 @@ class Main extends Component{
     }
 
     doAction1(e){
+        var flg = false;
         //ストアに回答データを登録
         if(1 === this.props.question[this.props.q_no[this.props.i]].answer){
             this.props.dispatch({ type: 'CORRECT'});
+            flg = true;
         } else {
             this.props.dispatch({ type: 'INCORRECT'});
         }
         //最終問題の場合結果画面へ遷移
         if(this.props.i===9){
-            this.updateFireData(this.props.correct);
+            if(flg==true){
+                this.updateFireData(this.props.correct+1);
+            }else{
+                this.updateFireData(this.props.correct);
+            }
             return this.props.dispatch({ type: 'LAST'});
         }
             }
 
     doAction2(e){
+        var flg = false;
         //ストアに回答データを登録
         if(2 === this.props.question[this.props.q_no[this.props.i]].answer){
             this.props.dispatch({ type: 'CORRECT'});
+            flg = true;
         } else {
             this.props.dispatch({ type: 'INCORRECT'});
         }
         //最終問題の場合結果画面へ遷移
         if(this.props.i===9){
-            this.updateFireData(this.props.correct);
+            if(flg==true){
+                this.updateFireData(this.props.correct+1);
+            }else{
+                this.updateFireData(this.props.correct);
+            }
             return this.props.dispatch({ type: 'LAST'});
         }
     }
 
     doAction3(e){
+        var flg = false;
         //ストアに回答データを登録
         if(3 === this.props.question[this.props.q_no[this.props.i]].answer){
             this.props.dispatch({ type: 'CORRECT'});
+            flg = true;
         } else {
             this.props.dispatch({ type: 'INCORRECT'});
         }
         //最終問題の場合結果画面へ遷移
         if(this.props.i===9){
-            this.updateFireData(this.props.correct);
+            if(flg==true){
+                this.updateFireData(this.props.correct+1);
+            }else{
+                this.updateFireData(this.props.correct);
+            }
             return this.props.dispatch({ type: 'LAST'});
         }
     }
