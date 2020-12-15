@@ -156,7 +156,7 @@ class Result extends Component{
             ans_list.push(
                 <tr className="ans_set">
                     <td>{this.props.question[this.props.q_no[i]].q_sentence}</td>
-                    <td>{this.props.question[this.props.q_no[i]].options[this.props.question[this.props.q_no[0]].answer-1]}</td>
+                    <td>{this.props.question[this.props.q_no[i]].options[this.props.question[this.props.q_no[i]].answer-1]}</td>
                 </tr>
                 );
         }
