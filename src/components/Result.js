@@ -153,12 +153,23 @@ class Result extends Component{
         }*/
         var ans_list = [];
         for(let i = 0; i < 10; i++){
-            ans_list.push(
-                <tr className="ans_set">
-                    <td>{this.props.question[this.props.q_no[i]].q_sentence}</td>
-                    <td>{this.props.question[this.props.q_no[i]].options[this.props.question[this.props.q_no[i]].answer-1]}</td>
-                </tr>
+            if(this.props.ans_list[i] == true){
+                ans_list.push(
+                    <tr className="ans_set">
+                        <td><i class="far fa-circle"></i></td>
+                        <td>{this.props.question[this.props.q_no[i]].q_sentence}</td>
+                        <td>{this.props.question[this.props.q_no[i]].options[this.props.question[this.props.q_no[i]].answer-1]}</td>
+                    </tr>
                 );
+            } else {
+                ans_list.push(
+                    <tr className="ans_set">
+                        <td><i class="fas fa-times"></i></td>
+                        <td>{this.props.question[this.props.q_no[i]].q_sentence}</td>
+                        <td>{this.props.question[this.props.q_no[i]].options[this.props.question[this.props.q_no[i]].answer-1]}</td>
+                    </tr>
+                );
+            }
         }
         //モーダル作成
         let modal;
@@ -172,6 +183,7 @@ class Result extends Component{
                         </div>
                         <table>
                             <tr className="ans_set">
+                                <th></th>
                                 <th>問題</th>
                                 <th>解答</th>
                             </tr>

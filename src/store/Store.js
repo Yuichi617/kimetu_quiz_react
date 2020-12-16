@@ -1,4 +1,4 @@
-import { createStore} from 'redux';
+import { createStore } from 'redux';
 
 //ステート初期化
 const info = {
@@ -7,6 +7,7 @@ const info = {
     i : 0,
     correct: 0,
     incorrect: 0,
+    ans_list: [],
     flg: 0
 }
 
@@ -20,6 +21,7 @@ function counterReducer (state = info, action){
                 i : 0,
                 correct : 0,
                 incorrect : 0,
+                ans_list: [],
                 flg: 1
             };
         case 'CORRECT':
@@ -29,6 +31,7 @@ function counterReducer (state = info, action){
                 i : state.i + 1,
                 correct : state.correct + 1,
                 incorrect : state.incorrect,
+                ans_list: [...state.ans_list, true],
                 flg: state.flg
             };
         case 'INCORRECT':
@@ -38,6 +41,7 @@ function counterReducer (state = info, action){
                 i : state.i + 1,
                 correct : state.correct,
                 incorrect : state.incorrect + 1,
+                ans_list: [...state.ans_list, false],
                 flg: state.flg
             };
         case 'LAST':
@@ -47,6 +51,7 @@ function counterReducer (state = info, action){
                 i : state.i,
                 correct : state.correct,
                 incorrect : state.incorrect,
+                ans_list: [...state.ans_list],
                 flg: 2
             };
         case 'RESET':
@@ -56,6 +61,7 @@ function counterReducer (state = info, action){
                 i : 0,
                 correct: 0,
                 incorrect: 0,
+                ans_list: [],
                 flg: 0
             };
         default:
