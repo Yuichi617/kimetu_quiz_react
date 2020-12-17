@@ -22,6 +22,7 @@ body {
 }
 
 /*メイン*/
+/*Home=========================*/
 .top-main-screen{
     background-color: white;
     width: 60%;
@@ -34,7 +35,7 @@ body {
 
 .top-main-screen .text1 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .top-main-screen .start_btn {
@@ -47,12 +48,91 @@ body {
     border-radius: 5px;
     padding: 5px 5px; 
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .top-main-screen .start_btn:hover{
     background-color: #808080;
 }
 
+.open_crea_question_modal .trigger_text{
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.open_crea_question_modal .trigger_text:hover{
+    color: #808080;
+}
+
+.crea_question_modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.crea_question_modal-inner{
+    position: absolute;
+    top: 3%;
+    right: 0;
+    left: 0;
+    width: 70%;
+    height: 90%;
+    min-width: 450px;
+    padding-bottom: 10px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+    overflow: auto;
+    /* アニメーション */
+    animation: fadeIn 0.3s linear;
+    animation-fill-mode: both;
+}
+
+.crea_question_modal-content{
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.crea_question_modal-content .modal-close-btn{
+    text-align:right;
+}
+
+.crea_question_modal-content .modal-close-btn .fa-times-circle{
+    font-size:20px;
+    color:#d3d3d3;
+    cursor: pointer;
+}
+
+.crea_question_modal-content table{
+    width: 95%;
+    margin: 0 auto;
+    /*table-layout: fixed;*/
+}
+
+.crea_question_modal-content table td{
+    padding: 10px;
+}
+
+.NoCol{
+    width: 20%;
+}
+
+.QuestionCol{
+    width: 40%;
+}
+
+.AnswerCol{
+    width: 40%;
+}
+
+
+/*Main=========================*/
 .main-screen {
     background-image: url("./images/background.png");
     background-repeat: repeat;
@@ -125,6 +205,8 @@ body {
     background-color: #f5f5f5;
 }
 
+/*Result=========================*/
+
 .result .result-text{
     margin-top:10px;
     margin-bottom:10px;
@@ -177,7 +259,7 @@ body {
     top: 8%;
     right: 0;
     left: 0;
-    width: 40%;
+    width: 60%;
     min-width: 450px;
     padding-bottom: 10px;
     margin: auto;
@@ -216,13 +298,13 @@ body {
     color: blue;
 }
 
-table{
+.modal-content table{
     width: 95%;
     margin: 0 auto;
     /*table-layout: fixed;*/
 }
 
-table td{
+.modal-content table td{
     padding: 10px;
 }
 /* ---------------------------- */

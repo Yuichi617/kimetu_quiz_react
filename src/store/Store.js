@@ -1,14 +1,18 @@
 import { createStore } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import json_data from '../assets/question_set.json';
 
 //ステート初期化
 const info = {
     q_no : [],
-    question : null,
+    question : json_data,
     i : 0,
     correct: 0,
     incorrect: 0,
     ans_list: [],
-    flg: 0
+    flg: 0,
+    crea_question: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 }
 
 //レデューサ
@@ -17,12 +21,13 @@ function counterReducer (state = info, action){
         case 'SETINFO':
             return{
                 q_no : action.rand_arr,
-                question : action.question,
+                question : state.question,
                 i : 0,
                 correct : 0,
                 incorrect : 0,
                 ans_list: [],
-                flg: 1
+                flg: 1,
+                crea_question: state.crea_question
             };
         case 'CORRECT':
             return{
@@ -32,7 +37,8 @@ function counterReducer (state = info, action){
                 correct : state.correct + 1,
                 incorrect : state.incorrect,
                 ans_list: [...state.ans_list, true],
-                flg: state.flg
+                flg: state.flg,
+                crea_question: action.tmp_crea_question
             };
         case 'INCORRECT':
             return{
@@ -42,7 +48,8 @@ function counterReducer (state = info, action){
                 correct : state.correct,
                 incorrect : state.incorrect + 1,
                 ans_list: [...state.ans_list, false],
-                flg: state.flg
+                flg: state.flg,
+                crea_question: state.crea_question
             };
         case 'LAST':
             return{
@@ -52,21 +59,36 @@ function counterReducer (state = info, action){
                 correct : state.correct,
                 incorrect : state.incorrect,
                 ans_list: [...state.ans_list],
-                flg: 2
+                flg: 2,
+                crea_question: state.crea_question
             };
         case 'RESET':
             return{
                 q_no : [],
-                question : null,
+                question : state.question,
                 i : 0,
                 correct: 0,
                 incorrect: 0,
                 ans_list: [],
-                flg: 0
+                flg: 0,
+                crea_question: state.crea_question
             };
         default:
             return state;
     }
 }
 
-export default createStore(counterReducer);
+// Redux Persistの設定
+const persistConfig = {
+    key: 'root',
+    storage,
+    whitelist: ['crea_question'] 
+}
+// パーシストレデューサの作成
+const persistedReducer = persistReducer(persistConfig, counterReducer)
+// ストアの作成
+let store = createStore(persistedReducer)
+//パーシスターの作成
+export const persistor = persistStore(store)
+
+export default store

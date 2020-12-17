@@ -63,7 +63,10 @@ class Main extends Component{
         var flg = false;
         //ストアに回答データを登録
         if(1 === this.props.question[this.props.q_no[this.props.i]].answer){
-            this.props.dispatch({ type: 'CORRECT'});
+            // crea_questionを更新するためのデータを用意
+            var tmp_crea_question = this.props.crea_question.concat();
+            tmp_crea_question[this.props.q_no[this.props.i]] = true;
+            this.props.dispatch({ type: 'CORRECT', tmp_crea_question: tmp_crea_question});
             flg = true;
         } else {
             this.props.dispatch({ type: 'INCORRECT'});
@@ -83,7 +86,10 @@ class Main extends Component{
         var flg = false;
         //ストアに回答データを登録
         if(2 === this.props.question[this.props.q_no[this.props.i]].answer){
-            this.props.dispatch({ type: 'CORRECT'});
+            // crea_questionを更新するためのデータを用意
+            var tmp_crea_question = this.props.crea_question.concat();
+            tmp_crea_question[this.props.q_no[this.props.i]] = true;
+            this.props.dispatch({ type: 'CORRECT', tmp_crea_question: tmp_crea_question});
             flg = true;
         } else {
             this.props.dispatch({ type: 'INCORRECT'});
@@ -103,7 +109,10 @@ class Main extends Component{
         var flg = false;
         //ストアに回答データを登録
         if(3 === this.props.question[this.props.q_no[this.props.i]].answer){
-            this.props.dispatch({ type: 'CORRECT'});
+            // crea_questionを更新するためのデータを用意
+            var tmp_crea_question = this.props.crea_question.concat();
+            tmp_crea_question[this.props.q_no[this.props.i]] = true;
+            this.props.dispatch({ type: 'CORRECT', tmp_crea_question: tmp_crea_question});
             flg = true;
         } else {
             this.props.dispatch({ type: 'INCORRECT'});
