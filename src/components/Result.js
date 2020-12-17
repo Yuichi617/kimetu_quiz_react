@@ -196,17 +196,19 @@ class Result extends Component{
           }
         return(
             <div className="result">
-                <div className="result-text">
-                {console.log("return:"+this.state.data.taisi)}
-                    {this.props.correct}問正解でした。
-                    あなたの鬼滅力は・・・
-                    {this.renderRank(this.props.correct)}
-                    {/*this.renderNumber(this.props.correct)*/}
-                </div>
-                {this.renderHierarchie(this.props.correct)}
-                    <div className="retry_btn" onClick={this.reset}>再挑戦</div>
-                <div className="print_answer" >
-                    <span className="print_answer_text" onClick={() => {this.handleClickOpen()}}>解答をみる</span>
+                <div className="result-inner">
+                    <div className="result-text">
+                    {console.log("return:"+this.state.data.taisi)}
+                        {this.props.correct}問正解でした。
+                        あなたの鬼滅力は・・・
+                        {this.renderRank(this.props.correct)}
+                        {/*this.renderNumber(this.props.correct)*/}
+                    </div>
+                    {this.renderHierarchie(this.props.correct)}
+                        <div className="retry_btn" onClick={this.reset}>再挑戦</div>
+                    <div className="print_answer" >
+                        <span className="print_answer_text" onClick={() => {this.handleClickOpen()}}>解答をみる</span>
+                    </div>
                 </div>
                 {modal}
             </div>

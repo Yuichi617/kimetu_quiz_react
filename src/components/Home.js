@@ -78,16 +78,20 @@ class Home extends Component{
           }
         return(
             <div className="top-main-screen">
-                <div className="text1">
-                    このクイズであなたの鬼滅力を試すことができます。
-                </div>
-                <div className="start_btn" onClick={this.setInfo}>
-                    始める
-                </div>
-                <div className="open_crea_question_modal" onClick={() => {this.handleClickOpen()}}>
-                    <label className="trigger_text">解放した問題を見る</label>
-                </div>
+                <div className="top-main-screen-inner">
+                    <div className="text1">
+                        このクイズであなたの鬼滅力を試すことができます。<br />
+                        正解した問題を後から見ることもできます。<br />
+                        全問正解を目指しましょう。
+                    </div>
+                    <div className="start_btn" onClick={this.setInfo}>
+                        始める
+                    </div>
+                    <div className="open_crea_question_modal" onClick={() => {this.handleClickOpen()}}>
+                        <label className="trigger_text">解放した問題を見る</label>
+                    </div>
                 {modal}
+                </div>
             </div>
         )
     }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store, { persistor } from './store/Store';
-import {Provider} from 'react-redux'
+import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 
 //　ローカルストレージをクリア
