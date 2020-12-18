@@ -40,18 +40,16 @@ body {
 .top-main-screen-inner{
     background-color: white;
     width: 90%;
-    height: 270px;
+    height: 310px;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
     border: solid 1.5px white;
     border-radius: 5px;
 }
 
 .top-main-screen .text1 {
     font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 
 .top-main-screen .start_btn {
