@@ -26,7 +26,7 @@ class Home extends Component{
             }
             return array;
           }
-        var arr = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+        var arr = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]);
         arr = arr.slice(0,10)
 
         return this.props.dispatch({ type: 'SETINFO', rand_arr: arr});
@@ -34,7 +34,7 @@ class Home extends Component{
 
     render(){
         var crea_question_list = [];
-        for(let i = 0; i < 20; i++){
+        for(let i = 0; i < 30; i++){
             if(this.props.crea_question[i] == true){
                 crea_question_list.push(
                     <tr className="crea_question_set">

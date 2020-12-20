@@ -12,7 +12,7 @@ const info = {
     incorrect: 0,
     ans_list: [],
     flg: 0,
-    crea_question: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    crea_question: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 }
 
 //レデューサ
