@@ -77,32 +77,32 @@ class Result extends Component{
         if (num_correct < 3) {
             return (
                 <div className="result-image-box">
-                    <img src={taisi} width="400"/>
+                    <img className="result-image" src={taisi} width="400"/>
                 </div>)
             } else if(num_correct < 5){
             return(
                 <div className="result-image-box">
-                    <img src={tuguko} width="400"/>
+                    <img className="result-image" src={tuguko} width="400"/>
                 </div>)
             } else if(num_correct < 7){
                 return(
                 <div className="result-image-box">
-                    <img src={kagen} width="400"/>
+                    <img className="result-image" src={kagen} width="400"/>
                 </div>)
             } else if(num_correct < 9){
                 return(
                 <div className="result-image-box">
-                    <img src={hasira} width="400"/>
+                    <img className="result-image" src={hasira} width="400"/>
                 </div>)
             } else if(num_correct < 10){
                 return(
                 <div className="result-image-box">
-                    <img src={jougen} width="400"/>
+                    <img className="result-image" src={jougen} width="400"/>
                 </div>)
             } else if(num_correct === 10){
                 return(
                 <div className="result-image-box">
-                    <img src={muzan} width="400"/>
+                    <img className="result-image" src={muzan} width="400"/>
                 </div>)
             }
         }

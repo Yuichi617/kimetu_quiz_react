@@ -80,9 +80,9 @@ class Home extends Component{
             <div className="top-main-screen">
                 <div className="top-main-screen-inner">
                     <div className="text1">
-                        このクイズであなたの鬼滅力を試すことができます。<br />
-                        さらに、問題に正解することで問題を解放できます。<br />
-                        100問全ての解放を目指しましょう。
+                        クイズに答えてあなたの鬼滅力を試しましょう。<br />
+                        問題に正解することで問題を解放できます。<br />
+                        全ての問題の解放を目指しましょう。
                     </div>
                     <div className="start_btn" onClick={this.setInfo}>
                         始める
