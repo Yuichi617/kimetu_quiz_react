@@ -34,7 +34,7 @@ class Home extends Component{
 
     render(){
         var crea_question_list = [];
-        for(let i = 0; i < 30; i++){
+        for(let i = 0; i < 50; i++){
             if(this.props.crea_question[i] == true){
                 crea_question_list.push(
                     <tr className="crea_question_set">

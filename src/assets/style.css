@@ -74,7 +74,7 @@ body {
 .open_crea_question_modal .trigger_text{
     font-size: 12px;
     cursor: pointer;
-    color: #414141;
+    color: #000000;
 }
 
 .open_crea_question_modal .trigger_text:hover{
@@ -579,7 +579,7 @@ body {
     }
     
     .main-screen .choice_box .options .option:hover{
-        background-color: #f5f5f5;
+        background-color: white;
     }
     
     /*Result=========================*/
