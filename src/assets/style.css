@@ -10,6 +10,17 @@ body {
     font-size: 14px;
   }
 
+/*広告*/
+.ad1{
+    width: 70%;
+    margin-top: 10px;
+}
+
+.ad2{
+    width: 72%;
+    margin-top: 20px;
+}
+
 /*ヘッダー*/
 .site-header .site_name {
     font-size: 25px;
@@ -370,6 +381,17 @@ body {
         background-color: #FFF;
         font-size: 14px;
       }
+
+    /*広告*/
+    .ad1{
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    .ad2{
+        width: 85%;
+        margin-top: 15px;
+    }
     
     /*ヘッダー*/
     .site-header .site_name {
@@ -410,16 +432,16 @@ body {
     }
     
     .top-main-screen .text1 {
-        font-size: 13px;
-        margin-top: 50px;
-        margin-bottom: 20px;
+        font-size: 12px;
+        margin-top: 58px;
+        margin-bottom: 13px;
     }
     
     .top-main-screen .start_btn {
         width: 20%;
         color: white;
         margin: 0 auto;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bold;
         background-color: #383838;
         border-radius: 5px;
