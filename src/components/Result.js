@@ -198,7 +198,7 @@ class Result extends Component{
             <div className="result">
                 <div className="result-inner">
                     <div className="result-text">
-                    {console.log("return:"+this.state.data.taisi)}
+                    {/*console.log("return:"+this.state.data.taisi)*/}
                         {this.props.correct}問正解でした。
                         あなたの鬼滅力は・・・
                         {this.renderRank(this.props.correct)}
